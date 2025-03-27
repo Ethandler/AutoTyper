@@ -25,6 +25,25 @@ root = tk.Tk()
 root.title("AutoTyper – Dracula Edition")
 root.geometry("900x600")
 
+from tkinter import Canvas
+
+def add_robot_face(root):
+    canvas = Canvas(root, width=200, height=200, bg="#3b3f51", highlightthickness=0)
+    canvas.place(relx=0.5, rely=0.25, anchor="center")
+
+    # Face outline
+    canvas.create_rectangle(10, 10, 190, 190, outline="#4d4f66", width=4)
+
+    # Eyes
+    canvas.create_oval(50, 50, 70, 70, fill="white")
+    canvas.create_oval(130, 50, 150, 70, fill="white")
+
+    # Mouth
+    canvas.create_rectangle(80, 140, 120, 150, fill="white", width=0)
+
+# In your GUI setup after root.geometry(...)
+add_robot_face(root)
+
 # If you have a dracula_theme.py, apply it if not comment it out.
 from ui.dracula_theme import apply_dracula_theme
 apply_dracula_theme(root)
