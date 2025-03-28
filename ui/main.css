@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Robot Face Container */
+  .robot-face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 260px;
+    background: #1b1b1b;
+    border: 5px solid #5effd0;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    box-shadow: 0 0 40px rgba(94, 255, 208, 0.2);
+  }
+  
+  /* Eyes */
+  .robot-eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .eye {
+    width: 50px;
+    height: 50px;
+    background: #5effd0;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #5effd0;
+  }
+  
+  /* Mouth */
+  .robot-mouth {
+    width: 120px;
+    height: 20px;
+    background: #5effd0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #5effd0;
+  }
+  
